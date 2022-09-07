@@ -1,0 +1,33 @@
+.overflow-demo {
+    margin-top: 50px;
+    height: 50vh;
+    border: 1px solid black;
+    overflow: scroll;
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+ul li {
+    padding: 10px 10px 10px 10px;
+    border: 2px solid black;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 20px;
+    border-radius: 15px;
+}
+
+.news-image{
+    width: 60%;
+    height: 50vh;
+}
+
+.news-image img {
+    float: left;
+    height: 300px;
+    width: 350px;
+}
+.news-image p{
+    margin-left: 5px;
+}

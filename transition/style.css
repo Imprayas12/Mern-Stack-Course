@@ -23,6 +23,10 @@
     font-size: 50px;
     padding-top:20px;
     color:white;
+    animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .one {
@@ -51,11 +55,15 @@ section{
 section h1{
     font-size: 50px;
     display: block;
-    transition-duration: 1s;
+    /* transition-duration: 1s; */
     cursor: pointer;
-    /* text-align: center; */
+    text-align: center;
+    /* transition-duration: 2s; */
+    
 }
 h1:hover {
     text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
-    /* transform: rotate(360deg); */
+    transform: rotate(360deg);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation
 }

@@ -155,8 +155,8 @@ h1 {
     animation-iteration-count: infinite;
 }
 .loader-front {
-    border: 1px solid firebrick;
-    background-color: firebrick;
+    border: 1px solid lightskyblue;
+    background-color: lightskyblue;
     width: 160px;
     height: 160px;
     border-radius: 50%;
@@ -164,13 +164,13 @@ h1 {
     margin-right: auto;
     display: block;
     justify-content: center;
-    margin-top:16px;
+    margin-top:19px;
 }
 @keyframes rotate {
     50% {
         transform: rotate(360deg);
     }
     100%{
-        transform: rotate(0);
+        transform: rotate(360deg);
     }
 }

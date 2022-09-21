@@ -1,13 +1,6 @@
-function first() {
-    console.log("first...");
-}
-function second() {
-    console.log("second....");
-}
-function third() {
-    console.log("third....");
-}
+let arr = [1,null,'hello',true,undefined];
 
-first();
-second();
-third();
+for(let i = 0; i < arr.length; i++) {
+    str = `current type is ${typeof(arr[i])}`
+    alert(str);
+}

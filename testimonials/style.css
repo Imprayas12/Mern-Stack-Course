@@ -1,35 +1,104 @@
-body {
-    background-color: gray;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-.testimonial {
+
+body {
+    background-color: silver;
+}
+.testimonials {
     width: 1440px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    gap: 20px;
 }
 .card {
-    margin-left: auto;
-    margin-right: auto;
-    /* display: block; */
-    /* display: flex; */
-    /* height: 300px; */
-    width: 80%;
     border: 1px solid white;
     /* margin: 10px 10px 10px 10px; */
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 20px;
     background-color: white;
-    padding: 15px 10px 10px 10px;
-    border-radius: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px -1px 65px 3px rgba(0,0,0,0.79);
+    -moz-box-shadow: 0px -1px 65px 3px rgba(0,0,0,0.79);
+    box-shadow: 0px -1px 65px 3px rgba(0,0,0,0.79);
 }
-.names {
-    display: inline-block;
-    padding-left: 5px;
+.card_header {
+    margin-right: 10px;
+    align-items: center;
+}
+h3 {
+    font-size: 15px;
+    margin-left: 10px;
 }
 
+.card_lead {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.card_quote {
+    font-size: 16px;
+    margin-top: 20px;
+    line-height: 1.4;
+    opacity: 70%;
+}
+
+.card:nth-of-type(1) {
+    grid-column: 1/3;
+}
+
+.card:nth-of-type(5) {
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+
+.card:nth-of-type(3) {
+    grid-column: 4/5;
+    grid-row: 1/3;
+}
 .card_img{
-    border: 2px solid purple;
+    height: 40px;
+    width: 40px;
+    border: 2px solid rgb(155,40,155);
     border-radius: 50%;
 }
 .card--bg-purple {
     background-color: hsl(263, 55%, 52%);
+    border: hsl(263, 55%, 52%);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top 10px right 100px;
+    color: white;
+}
+.names {
+    display: inline-block;
+}
+.card--bg-grey {
+    background-color: hsl(217, 19%, 35%);
+    /* background-image: url(./images/bg-pattern-quotation.svg); */
+    border: hsl(217, 19%, 35%);
+    color:aliceblue;
+    opacity: 70%;
+}
+
+.card--bg-black {
+    background-color:  hsl(219, 29%, 14%);
+    border:  hsl(219, 29%, 14%);
+    color: white;
+    opacity: 80%;
+}
+
+.card--bg-white {
+    background-color: hsl(0, 0%, 100%);
+    border: hsl(0, 0%, 100%);
+    color: black;
+    opacity: 80%;
+}
+
+.names > p {
+    margin-left: 2px;
 }

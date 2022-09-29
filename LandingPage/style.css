@@ -1,0 +1,88 @@
+
+/* * {
+    padding: 0 2.4vw 0 2.4vw;
+} */
+body {
+    background-color: rgb(5,6,10);
+    overflow-x: hidden;
+}
+.navbar {
+    color:aliceblue;
+    display: flex;
+    /* border: 2px solid white; */
+    justify-content: space-between;
+    border-bottom: 0.02px solid white;
+    border: 0.0001px solid rgb(242, 242, 242) hsl(0, 0%, 95%);
+}
+.list {
+    padding-top: 10px;
+}
+.list>ul {
+    padding-top: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size:larger;
+}
+.list > ul > li {
+    padding-right: 20px;
+    padding-top: 10px;
+}
+.navbar > div > img {
+    padding-left:50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.navbar> ul {
+    display: flex;
+    margin-left: 0;
+}
+
+.icons>li {
+    padding-right: 40px;
+    margin-top:16px;
+}
+
+.welcome {
+    height: 940px;
+    width: 1500px;
+    background-image: url(/LandingPage/home-img.jpeg);
+    color:antiquewhite;
+}
+
+.text>button {
+    height: 40px;
+    width:160px;
+    border-radius: 20px;
+    background-color: sandybrown;
+    font-weight: bolder;
+    transition: 0.5s;
+}
+.text > button:hover {
+    transform: scale(1.2);
+}
+.text > h1 {
+    font-size: 50px;
+}
+.text > h3 {
+    color: white;
+    font-size: 30px;
+}
+.welcome {
+    padding-left: 120px;
+    padding-top: 200px;
+}
+
+.about-us {
+    color: white;
+    display: flex;
+    /* text-align: center; */
+    justify-content: center;
+    font-size: 30px;
+}
+
+.about-us > h1:nth-of-type(2) {
+    color: goldenrod;
+    padding-left: 15px;
+    /* display:inline-block; */
+}

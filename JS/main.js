@@ -238,16 +238,161 @@ arr.push()*/
 // add(12,13,print)
 
 // const fs = require("fs");
-// let count = 1
+// function print(err,data) {
+//     if(!err) console.log(data);
+// }
 // function callback(err,data) {
-//     if(!err) count = count + 1
-//     if(count < 6) {
-//         console.log(data)
-//         count = count + 1;
-//         fs.readFile((count + 1) + ".html",'utf-8',callback)
+//     if(!err) {
+//         count += 1;
+//         if(count < 6) {
+//             var data = fs.readFile(count + ".html", "utf-8",print);
+//         }
+//         console.log(data); 
 //     }
-//     else return
 // } 
-// fs.readFile((count + 1) + ".html",'utf-8',callback)
+// for(let i = 1; i <= 5; i++) {
+//     fs.readFile(i + ".html", "utf-8",print);
+// }
 
-     
+/**Sahi wala synchronous function hai bro ye**/
+// let count  = 0
+// function cb(err,data){
+//     count += 1;
+//     if(count <= 5) {
+//         if(!err) {
+//             console.log(data);
+//         }
+//         else console.log(err);
+//     }
+//     fs.readFile((count + 1) + ".html", "utf-8",cb);
+// }
+
+// fs.readFile("1.html", "utf-8",cb)
+
+/*******************Set timeout ******************/
+// setTimeout(() => {
+//     console.log("eksilento");
+// },3000);
+// let a = true;
+
+// while(a) {
+//     setTimeout(function() {
+//         a = false;
+//     },10000);
+//     console.log("hello");
+// }
+/* let a = true
+let count = 0
+setInterval(function() {
+    if(a) {
+        count++;
+        console.log(count);
+    }
+},1000);
+
+setTimeout(function() {
+    a = false;
+},10069); */
+
+
+/***************Promises ********************/
+// const p = new Promise((function(resolve,reject) {
+//     setTimeout(() => {
+//         let randomNum = Math.floor(Math.random() * 10);
+//         if(randomNum % 2 == 0){
+//             resolve(randomNum);
+//         }
+//         else {
+//             reject(resolve);
+//         }
+//     },1000);
+// }));
+
+//     p.then((data) => {
+//         console.log(data)
+//     }).catch().catch(() => {
+//         console.log("reject")
+//     }) 
+/*******************Async/Await*******************/
+
+async function abc() {
+    return "hello"
+}
+const fs = require('fs');
+
+// function NONASYNC() {
+//     let readFilePromise = fs.promises.readFile("1.html","utf-8");  
+//     resolve(readFilePromise);
+//     readFilePromise.then((data) => {
+//     console.log(data);
+//     return data;
+// })
+// // }
+// async function ASYNC() {
+//     let data = await fs.promises.readFile('1.html','utf-8')
+//     console.log(data);
+// }
+// ASYNC()
+// function abC() {
+//     const p = new Promise((resolve,reject) => {
+//         resolve("hello")
+//     })
+//     return p;
+// }
+// const fs = require('fs');
+// .then((data) => {
+//     console.log(data);
+//     return data + 3;
+// })
+
+// .then((data) => {
+//     console.log(data);
+//     return data + 4;
+// })
+
+// .then((data) => {
+//     console.log(data);
+// })
+
+// let readFilePromise
+// abc().then((data) => {
+//     console.log(data)
+//     return data + "hello"
+// })
+
+// .then((data) => {
+//     console.log(data);
+//     return data + "hello2"
+// })
+
+// .then((data) => {
+//     console.log(data)
+// })
+
+// const fs = require('fs')
+// async function abc() {
+//     await fs.promises.writeFile("1.html","hello");
+//     let data = await fs.promises.readFile("2.html","utf-8");
+//     console.log(data);
+
+//     return "how are you"
+// }
+// async function main() {
+//     let data = await abc()
+//     console.log(data)
+// }
+
+// main()
+function abc() {
+    return new Promise((resolve,reject) => {
+        fs.promises.readFile("2.html","utf-8").then((data) => {
+            console.log(data);
+        })
+    })
+}
+abc().then((data) => {
+    console.log(data);
+}).catch((err) => {
+    console.log(err);
+})
+

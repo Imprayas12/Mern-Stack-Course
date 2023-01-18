@@ -1,8 +1,13 @@
-function printArr(arr) {
-//     arr.forEach(element => {
-//         if (typeof element === 'function') {
-//             element()
-//         }
-//         else console.log(typeof element);
-//     });
-// }
+abc().then((data) => {
+//     console.log(data)
+//     return data + "hello"
+// })
+
+// .then((data) => {
+//     console.log(data);
+//     return data + "hello2"
+// })
+
+// .then((data) => {
+//     console.log(data)
+// })

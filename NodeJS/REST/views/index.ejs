@@ -9,7 +9,7 @@
 <body>
     <ul>
         <% for(const commet of comment) { %>
-             <li class = "list-item"><%= commet.user + " " + commet.text %></li> 
+            <form action="comments/<%= commet.id%>/?_method=DELETE" method="post"><li class = "list-item"><%= commet.user + " " + commet.text %> <button>Delete</button> </form></li> 
        <%  } %>
      </ul>
     <form action="/comments/new" method="get" ><button><a>Add New Comment</a></button></form>

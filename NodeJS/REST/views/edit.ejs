@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+
+<body>
+    <form id="form" method="post" action="/comments/<%=  curobj.id %> /?_method=PATCH">
+        <label for="user" style="display: none;">user</label>
+        <input type="id" style="display: none;" name="" id="" value=<%=curobj.id %>>
+        <input value = <%= curobj.user %> type="text" id = "user" name = "user">
+        <label for="password">text</label>
+        <textarea style="height: 100px; width: 100px;" type="text" id="password" name="Text">
+            <%= curobj.text %> 
+        </textarea>
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>

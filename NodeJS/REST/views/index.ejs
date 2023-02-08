@@ -12,14 +12,7 @@
              <li class = "list-item"><%= commet.user + " " + commet.text %></li> 
        <%  } %>
      </ul>
-    <button id = "add-new-comment">Add New Comment</button>
-    <form id = "form" method = "post" action = "/comments" style="display:none;">
-        <label for="user">user</label>
-        <input type="text" id = "user" name = "user">
-        <label for="password">text</label>
-        <input type = "text" id = "password" name = "Text"></input>
-        <button>Submit</button>
-    </form>
+    <form action="/comments/new" method="get" ><button><a>Add New Comment</a></button></form>
 </body>
 <script>
     document.getElementById('add-new-comment').addEventListener('click',() => {

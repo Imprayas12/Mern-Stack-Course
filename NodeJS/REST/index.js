@@ -26,6 +26,10 @@ app.get('/comments',(req,res) => {
     res.render('index',{comment});
 })
 
+app.get('/comments/new',(req,res) => {
+    res.render('new');
+})
+
 app.post('/comments',(req,res) => {
     console.log(req.body);
     let id = comment.length;

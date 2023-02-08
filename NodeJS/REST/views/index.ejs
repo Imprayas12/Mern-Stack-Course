@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <% for(const commet of comment) { %>
+             <li class = "list-item"><%= commet.user + " " + commet.text %></li> 
+       <%  } %>
+     </ul>
+    <button id = "add-new-comment">Add New Comment</button>
+    <form id = "form" method = "post" action = "/comments" style="display:none;">
+        <label for="user">user</label>
+        <input type="text" id = "user" name = "user">
+        <label for="password">text</label>
+        <input type = "text" id = "password" name = "Text"></input>
+        <button>Submit</button>
+    </form>
+</body>
+<script>
+    document.getElementById('add-new-comment').addEventListener('click',() => {
+        document.getElementById('form').style.display = 'block';
+    })
+</script>
+</html>

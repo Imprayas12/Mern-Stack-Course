@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const mongoose = require('mongoose')
-
+const serie = require('./models/serie')
 app.use(express.static(path.join(__dirname, "public", "JS")))
 
 mongoose.connect('mongodb://localhost:27017/moviesd')
@@ -15,6 +15,9 @@ app.get('/',(req,res) => {
 })
 
 app.get('/search',(req,res) => {
+   
+    const {q} = req.query;
+    console.log(serie.find({name: {$regex: /q.*$/}}))
     res.send('You are on search route')
 })
 
